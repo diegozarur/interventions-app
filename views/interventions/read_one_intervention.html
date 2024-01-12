@@ -1,0 +1,61 @@
+<md-dialog>
+    <form ng-cloak>
+
+        <!-- dialog box title -->
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Intervention: #{{id}}</h2>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+
+                <!-- display intervention information -->
+                <md-input-container class="md-block">
+                    <label>Wording</label>
+                    <input ng-model="wording" disabled>
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Description</label>
+                    <input ng-model="description" disabled>
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Name</label>
+                    <input ng-model="name" disabled>
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Speaker</label>
+                    <input ng-model="speaker" disabled>
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Location</label>
+                    <input ng-model="location" disabled>
+                </md-input-container>
+                <div layout-gt-xs="row">
+                    <md-input-container class="md-block" flex-gt-xs>
+                        <label>Date of Intervention</label>
+                        <md-datepicker ng-model="date_of_intervention"
+                                       md-placeholder="Date of Intervention" disabled></md-datepicker>
+                    </md-input-container>
+
+                    <md-input-container>
+                        <label>Status</label>
+                        <input ng-model="status" disabled>
+                    </md-input-container>
+                </div>
+
+
+            </div>
+        </md-dialog-content>
+
+        <!-- button to close the dialog box -->
+        <md-dialog-actions layout="row">
+            <md-button ng-click="cancel()">Cancel</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

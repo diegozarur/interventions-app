@@ -1,0 +1,78 @@
+<div layout="row" ng-controller="InterventionController" ng-cloak>
+    <div flex="10"></div>
+
+    <div flex="80" class="m-20px-0">
+
+        <!-- page title & 'create intervention' button -->
+        <md-toolbar class="md-hue-2">
+            <div class="md-toolbar-tools">
+                <!-- page title -->
+                <div flex md-truncate>
+                    <h3 class="md-headline">Interventions</h3>
+                </div>
+
+                <!-- 'create' intervention button -->
+                <md-button class="md-raised md-primary" ng-click="showCreateInterventionForm()">Create</md-button>
+            </div>
+        </md-toolbar>
+
+        <!-- 'search' bar -->
+        <md-input-container class="md-block m-b-20px">
+            <form ng-submit="searchInterventions()">
+                <label>Search interventions...</label>
+                <input ng-model="intervention_search_keywords" ng-change="searchInterventions()">
+            </form>
+        </md-input-container>
+        <md-content flex>
+            <md-button md-no-ink class="md-primary" ng-click="sortBy('date_of_interventions')">Sort by Date
+                Interventions
+            </md-button>
+            <span class="sortorder" ng-show="propertyName === 'date_of_interventions'"
+                  ng-class="{reverse: reverse}"></span>
+        </md-content>
+        <md-content flex>
+            <!-- show intervention record list -->
+            <md-list ng-init="readInterventions()" class="intervention-list" flex>
+                <md-list-item class="md-3-line" ng-repeat="intervention in interventions | orderBy:propertyName:reverse"
+                              ng-disabled="intervention.status == 'Completed'" ng-click="null">
+                    <!-- intervention information -->
+                    <div class="md-list-item-text">
+                        <p class="md-subhead">Name: {{intervention.name}}</p>
+                        <p class="md-subhead">Speaker: {{intervention.speaker}}</p>
+                        <p class="md-subhead">Location: {{intervention.location}}</p>
+                        <p class="md-subhead md-raised md-hue-2">Status: {{intervention.status}}</p>
+                    </div>
+
+                    <!-- 'read one', 'edit' and 'delete' buttons -->
+                    <div class="md-secondary-container">
+                        <!-- 'read one' button -->
+                        <md-button
+                                ng-disabled="intervention.status == 'Completed'"
+                                class="{{intervention.status == 'Completed' ? 'md-raised md-primary' : 'md-raised md-info'}}"
+                                ng-click="readOneIntervention(intervention.id)">Read
+                        </md-button>
+
+                        <!-- 'edit' button -->
+                        <md-button
+                                ng-disabled="intervention.status == 'Completed'"
+                                class="{{intervention.status == 'Completed' ? 'md-raised md-primary' : 'md-raised md-primary'}}"
+                                ng-click="showUpdateInterventionForm(intervention.id)">
+                            Edit
+                        </md-button>
+
+                        <!-- 'delete' button -->
+                        <md-button
+                                ng-disabled="intervention.status == 'Completed'"
+                                class="{{intervention.status == 'Completed' ? 'md-raised md-primary' : 'md-raised md-danger'}}"
+                                ng-click="confirmDeleteIntervention($event, intervention.id)">Delete
+                        </md-button>
+                    </div>
+
+                    <md-divider ng-if="!$last"></md-divider>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </div>
+
+    <div flex="10"></div>
+</div> <!-- end row -->

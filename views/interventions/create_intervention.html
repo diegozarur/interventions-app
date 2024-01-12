@@ -1,0 +1,53 @@
+<md-dialog>
+    <form ng-cloak>
+
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Create Intervention</h2>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+
+                <md-input-container class="md-block">
+                    <label>Wording</label>
+                    <input ng-model="wording">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Description</label>
+                    <input ng-model="description">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Name</label>
+                    <input ng-model="name">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Speaker</label>
+                    <input ng-model="speaker">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Location</label>
+                    <input ng-model="location">
+                </md-input-container>
+
+                <div layout-gt-xs="row">
+                    <md-input-container class="md-block" flex-gt-xs>
+                        <label>Date of Intervention</label>
+                        <md-datepicker ng-model="date_of_intervention"
+                                       md-placeholder="Date"></md-datepicker>
+                    </md-input-container>
+                </div>
+            </div>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <md-button ng-click="cancel()">Cancel</md-button>
+            <md-button ng-click="createIntervention()" class="md-primary">Create</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
