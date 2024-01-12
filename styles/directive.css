@@ -1,0 +1,14 @@
+#footer-red {
+	background: #993333;
+	color: white;
+	padding-top: 7px;
+}
+#footer-red ul {
+	list-style: none;
+}
+#footer-black {
+	background: #0f1f3d;
+	color: white;
+	padding-top: 7px;
+	padding-bottom: 1px;
+}
