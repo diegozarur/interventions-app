@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" ng-csp="" ng-app="app">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <base href="/">
+    <title>Interventions App</title>
+    <meta name="description" content="Web portal front-end app">
+
+    <!-- mobile meta -->
+    <meta name="diegodias" content="True">
+    <meta name="MobileOptimized" content="320">
+<!--    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">-->
+
+    <!-- CSS -->
+    <!-- build:css css/style.min.css -->
+
+    <!-- Library -->
+    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/owl.carousel.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/owl.theme.default.css"/>
+    <link rel="stylesheet" type="text/css" href="node_modules/angular-material/angular-material.min.css"/>
+    <!-- Global CSS -->
+    <link rel="stylesheet" type="text/css" href="styles/global.css"/>
+    <!-- Pages CSS -->
+    <link rel="stylesheet" type="text/css" href="styles/pages.css"/>
+    <!-- Directive CSS -->
+    <link rel="stylesheet" type="text/css" href="styles/directive.css"/>
+    <!-- endbuild -->
+
+</head>
+
+<body>
+
+<!-- Main view for templates -->
+<div ui-view></div>
+
+<script type="text/javascript" src="js/nonangular/lodash.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+
+<!-- Vendors -->
+<!-- build:nonangularlibs js/nonangularlibs.js -->
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+<!-- endbuild -->
+
+<!-- Non-angular libraries -->
+<!-- build:libs js/libs.js -->
+<script type="text/javascript" src="js/nonangular/lodash.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<!-- endbuild -->
+
+<!-- Angular external libraries for application -->
+<!-- build:angularlibs js/angularlibs.js -->
+<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+<script type="text/javascript" src="node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+<script type="text/javascript" src="node_modules/angular-resource/angular-resource.js"></script>
+<script type="text/javascript" src="node_modules/ngstorage/ngStorage.js"></script>
+<script type="text/javascript" src="node_modules/angular-material/angular-material.min.js"></script>
+<script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="node_modules/angular-messages/angular-messages.min.js"></script>
+<script type="text/javascript" src="node_modules/angular-aria/angular-aria.min.js"></script>
+<!-- endbuild -->
+
+<!-- Angular components -->
+<!-- build:appcomponents js/appcomponents.js -->
+<script type="text/javascript" src="app/app-config.js"></script>
+<!-- Constants -->
+<script type="text/javascript" src="app/constants.js"></script>
+
+<!-- Controllers -->
+<script type="text/javascript" src="controllers/interventions/controller.js"></script>
+<script type="text/javascript" src="controllers/interventions/factory.js"></script>
+<!-- endbuild -->
+
+<!-- Application sections -->
+<!-- build:mainapp js/mainapp.js -->
+<script type="text/javascript" src="js/nonangular/owl.carousel.js"></script>
+<!-- endbuild -->
+
+</body>
+
+</html>

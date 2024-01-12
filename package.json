@@ -1,0 +1,50 @@
+{
+  "name": "Interventions",
+  "version": "2.1.0",
+  "license": "MIT",
+  "description": "Front-end application",
+  "main": "app/app.js",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "del": "^1.1.1",
+    "gulp": "^4.0.2",
+    "gulp-angular-templatecache": "^1.6.0",
+    "gulp-changed": "^1.1.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-eslint": "^4.0.2",
+    "gulp-html-replace": "^1.4.4",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-notify": "^2.2.0",
+    "gulp-size": "^1.2.0",
+    "gulp-uglify": "^1.1.0",
+    "gulp-usemin": "^0.3.29"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "server": "gulp serveSource",
+    "serverbuild": "gulp serveBuild",
+    "postinstall": "gulp serveBuild"
+  },
+  "repository": {
+    "type": "github",
+    "url": ""
+  },
+  "author": "Diego Dias",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.20",
+    "angular": "^1.7.2",
+    "angular-animate": "^1.8.3",
+    "angular-aria": "^1.8.3",
+    "angular-material": "^1.2.5",
+    "angular-messages": "^1.8.3",
+    "angular-resource": "~1.5.8",
+    "axios": "^1.6.5",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.6.0",
+    "ngstorage": "^0.3.11",
+    "popper.js": "^1.14.6",
+    "request": "^2.88.0"
+  }
+}
