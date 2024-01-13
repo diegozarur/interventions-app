@@ -1,8 +1,8 @@
-# AngularJS/Python Intervention Management
+# AngularJS Intervention Management
 
 ## Project Description
 
-This project is an AngularJS/Python lab that aims to create an interface for managing interventions. The interface
+This project is an AngularJS lab that aims to create an interface for managing interventions. The interface
 includes a table listing interventions, a button to add new interventions, and functionalities to modify and delete
 interventions.
 
